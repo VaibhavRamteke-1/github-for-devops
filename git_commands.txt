@@ -18,3 +18,24 @@ git push origin master                                             #Will push fi
 
 
 git clone git@github.com:username/repo.git                         #To clone(copy) an exiting remote repo on your local system for the first time.
+
+git pull origin master						   #pull changes from repository to local.
+
+git branch				 #To see all the branches
+git checkout -b branchname		 #To create new branch.
+git checkout branchname			 #To switch to different branch	
+git branch -d new_branch		 #To delete branch
+git branch -a				 #To see hidden branch
+
+git fetch				 #Pull the changes on "/remotes/origin/master/" not on "master" directly, local code will not be impacted.
+
+git merge feature_branch 		 #Currently on master branch, will merge the change of feature to master branch.
+
+git tag					 #To see tag
+git tag v.1.0.0				 #To give tag
+
+git cherry-pick commitid		 #To merge specific commit id, not entire.
+
+git revert commitid 			 #Will revert to last commitid
+
+git stash				 #moves the all code from working/staging area to stash area/mode(hidden)			
