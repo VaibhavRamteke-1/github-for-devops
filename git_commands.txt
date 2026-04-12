@@ -2,6 +2,15 @@
 # Description: Git commands
 
 
-git init             #To initiate repository on our local sytem(laptop) by name (.git)
-
-
+git init                                 			   #To initiate repository on our local sytem(laptop) by name (.git).
+git status                              			   #To check the status of tracked, untracked file.
+git add filename                         			   #Running this will move the file from untracked(working area) to tracked(staging area).  
+git commit -m "add your msg"             			   #Will make uncommitted(staging area) file to committed(local area) one.
+git log                                  			   #Tell who created the file and date & time
+git log --oneline    	      		 			   #Tell commit id of the file
+git config --global user.email 'gmail@gmail.com			   #To configure github gmail on our local system
+git config --global user.name 'your name'                          #To configure github username on our local system
+git config --global user.email					   #To verify email
+git config --global user.name                                      #To verify name
+git remote add origin git@github.com:username/repo.git		   #To map github repository with origin(origin is just a name, you can give any name)
+git remote -v							   #It will list you remote repository in github
