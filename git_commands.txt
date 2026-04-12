@@ -1,0 +1,7 @@
+# Author: Vaibhav Ramteke
+# Description: Git commands
+
+
+git init             #To initiate repository on our local sytem(laptop) by name (.git)
+
+
