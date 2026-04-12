@@ -3,39 +3,39 @@
 
 
 git init                                 			   #To initiate repository on our local sytem(laptop) by name (.git).
-git status                              			   #To check the status of tracked, untracked file.
+git status                              			   #To check the status of tracked and untracked files.
 git add filename                         			   #Running this will move the file from untracked(working area) to tracked(staging area).  
 git commit -m "add your msg"             			   #Will make uncommitted(staging area) file to committed(local area) one.
 git log                                  			   #Tell who created the file and date & time
-git log --oneline    	      		 			   #Tell commit id of the file
-git config --global user.email 'gmail@gmail.com			   #To configure github gmail on our local system
-git config --global user.name 'your name'                          #To configure github username on our local system
-git config --global user.email					   #To verify email
+git log --oneline    	      		 			           #Tell commit id of the file
+git config --global user.email 'gmail@gmail.com	 #To configure GitHub Gmail on our local system
+git config --global user.name 'your name'        #To configure GitHub username on our local system
+git config --global user.email					          #To verify email
 git config --global user.name                                      #To verify name
-git remote add origin git@github.com:username/repo.git		   #To map github repository with origin(origin is just a name, you can give any name)
-git remote -v							   #It will list you remote repository in github
-git push origin master                                             #Will push file from local to remote repository.
+git remote add origin git@github.com:username/repo.git		         #To map github repository with origin(origin is just a name, you can give any name)
+git remote -v							                                         #It will list your remote repository in GitHub.
+git push origin master                                             #Will push the file from the local to the remote repository.
 
 
 git clone git@github.com:username/repo.git                         #To clone(copy) an exiting remote repo on your local system for the first time.
 
-git pull origin master						   #pull changes from repository to local.
+git pull origin master						                                 #pull changes from the repository to the local.
 
-git branch				 #To see all the branches
-git checkout -b branchname		 #To create new branch.
-git checkout branchname			 #To switch to different branch	
-git branch -d new_branch		 #To delete branch
-git branch -a				 #To see hidden branch
+git branch				                                                 #To see all the branches
+git checkout -b branchname		                                     #To create new branch.
+git checkout branchname		                                      	 #To switch to different branch	
+git branch -d new_branch		                                       #To delete branch
+git branch -a				                                               #To see hidden branch
 
-git fetch				 #Pull the changes on "/remotes/origin/master/" not on "master" directly, local code will not be impacted.
+git fetch			                        	 #Pull the changes on "/remotes/origin/master/" not on "master" directly, local code will not be impacted.
 
-git merge feature_branch 		 #Currently on master branch, will merge the change of feature to master branch.
+git merge feature_branch 		             #Currently on master branch, will merge the change of feature to master branch.
 
-git tag					 #To see tag
-git tag v.1.0.0				 #To give tag
+git tag					                         #To see the tag
+git tag v.1.0.0				                   #To give tag
 
-git cherry-pick commitid		 #To merge specific commit id, not entire.
+git cherry-pick commitid		             #To merge specific commit id, not entire.
 
-git revert commitid 			 #Will revert to last commitid
+git revert commitid 			               #Will revert to last commitid
 
-git stash				 #moves the all code from working/staging area to stash area/mode(hidden)			
+git stash				                         #moves all code from the working/staging area to the stash area/mode(hidden)			
