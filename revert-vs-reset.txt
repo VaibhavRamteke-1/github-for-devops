@@ -72,8 +72,8 @@ git reset --hard HEAD~1
 - Shared branches (main/master)
 - Production environment
 - Already pushed commits
-⚠️
-##Problem
-#Requires:
+
+#Problem :
+Requires:
 git push --force
 This breaks team history
