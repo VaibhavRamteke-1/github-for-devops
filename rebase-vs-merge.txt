@@ -1,0 +1,38 @@
+##Git Rebase vs Merge Guide :
+
+#Overview :
+This document explains the difference between git merge and git rebase, when to use each, and best practices in real-world projects.
+
+A --- B --- C        (commit on develop)
+       \
+        D --- E      (commit on feature/login)
+
+#What is Git Merge?
+git merge combines changes from one branch into another.
+
+Example:
+git checkout develop
+git merge feature/login
+
+Result:
+Creates a merge commit
+Preserves full history
+
+Visual:
+A --- B --- C -------- M
+       \              /
+        D --- E -----
+
+#What is Git Rebase?
+git rebase moves your branch to a new base and reapplies commits.
+
+Example:
+git checkout feature/login
+git rebase develop
+
+Result:
+No merge commit
+Cleaner, linear history
+
+Visual:
+A --- B --- C --- D' --- E'
