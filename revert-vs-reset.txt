@@ -1,0 +1,79 @@
+##Git Revert vs Reset :
+Both are used to undo changes, but they work very differently.
+Choosing the wrong one can break your team workflow.
+
+1) git revert (SAFE - Production)
+#Command:
+git revert <commit-id>
+
+#What it does:
+- Creates a new commit
+- Undoes changes of a specific commit
+- Does NOT delete history
+
+Example :
+
+Before:
+A → B → C → D (bad commit)
+
+Run:
+git revert D
+
+After:
+A → B → C → D → E
+E = revert commit (undo of D)
+
+#Key concept :
+“Opposite changes” = revert applies reverse of the bad commit
+Example:
+D: x = 10 → 20
+E: x = 20 → 10
+
+#When to use :
+- Production issue 
+- Code already pushed
+- Working in team
+
+#Advantages :
+- Safe for team
+- No history rewrite
+- No force push
+
+2) git reset (DANGEROUS in shared repos) :
+Command:
+git reset --soft HEAD~1
+git reset --hard HEAD~1
+
+#What it does:
+- Moves branch pointer backward
+- Removes commits from history
+
+#Example :
+
+Before:
+A → B → C → D
+
+After (hard reset):
+A → B → C
+Commit D is removed
+
+#Types of reset :
+
+1. Soft : It doesn't clean stagin area & working area(file will be there).
+git reset --soft HEAD~1
+
+2. Mixed : It cleans only staging area, it moves all the files from staging to working area(file will be there). Mixed is a default mode.
+git reset HEAD~1
+
+3. Hard : It cleans staging area. It deletes all the files from staging area. you won't be able to recover deleted file.
+git reset --hard HEAD~1
+
+#When NOT to use :
+- Shared branches (main/master)
+- Production environment
+- Already pushed commits
+⚠️
+##Problem
+#Requires:
+git push --force
+This breaks team history
