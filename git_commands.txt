@@ -1,41 +1,83 @@
 # Author: Vaibhav Ramteke
 # Description: Git commands
 
+#To initiate repository on our local sytem(laptop) by name (.git).
+git init                                 			   
 
-git init                                 			   #To initiate repository on our local sytem(laptop) by name (.git).
-git status                              			   #To check the status of tracked and untracked files.
-git add filename                         			   #Running this will move the file from untracked(working area) to tracked(staging area).  
-git commit -m "add your msg"             			   #Will make uncommitted(staging area) file to committed(local area) one.
-git log                                  			   #Tell who created the file and date & time
-git log --oneline    	      		 			           #Tell commit id of the file
-git config --global user.email 'gmail@gmail.com	 #To configure GitHub Gmail on our local system
-git config --global user.name 'your name'        #To configure GitHub username on our local system
-git config --global user.email					          #To verify email
-git config --global user.name                                      #To verify name
-git remote add origin git@github.com:username/repo.git		         #To map github repository with origin(origin is just a name, you can give any name)
-git remote -v							                                         #It will list your remote repository in GitHub.
-git push origin master                                             #Will push the file from the local to the remote repository.
+#To check the status of tracked and untracked files.
+git status                              			   
 
+#Running this will move the file from untracked(working area) to tracked(staging area).
+git add filename                         			     
 
-git clone git@github.com:username/repo.git                         #To clone(copy) an exiting remote repo on your local system for the first time.
+#Running this will move the file from untracked(working area) to tracked(staging area).
+git commit -m "add your msg"             			   
 
-git pull origin master						                                 #pull changes from the repository to the local.
+#Tell who created the file and date & time
+git log                                  			   
 
-git branch				                                                 #To see all the branches
-git checkout -b branchname		                                     #To create new branch.
-git checkout branchname		                                      	 #To switch to different branch	
-git branch -d new_branch		                                       #To delete branch
-git branch -a				                                               #To see hidden branch
+#Tell commit id of the file
+git log --oneline    	      		 			           
 
-git fetch			                        	 #Pull the changes on "/remotes/origin/master/" not on "master" directly, local code will not be impacted.
+#To configure GitHub Gmail on our local system
+git config --global user.email 'gmail@gmail.com	 
 
-git merge feature_branch 		             #Currently on master branch, will merge the change of feature to master branch.
+#To configure GitHub username on our local system
+git config --global user.name 'your name'        
 
-git tag					                         #To see the tag
-git tag v.1.0.0				                   #To give tag
+#To verify email
+git config --global user.email					          
 
-git cherry-pick commitid		             #To merge specific commit id, not entire.
+#To verify name
+git config --global user.name                                      
 
-git revert commitid 			               #Will revert to last commitid
+#To map github repository with origin(origin is just a name, you can give any name)
+git remote add origin git@github.com:username/repo.git		         
 
-git stash				                         #moves all code from the working/staging area to the stash area/mode(hidden)			
+#To map github repository with origin(origin is just a name, you can give any name)
+git remote -v							                                         
+
+#Will push the file from the local to the remote repository.
+git push origin master
+
+#To clone(copy) an exiting remote repo on your local system for the first time.
+git clone git@github.com:username/repo.git                         
+
+#Pull changes from the repository to the local.
+git pull origin master						                                 
+
+#To see all the branches
+git branch				                                                
+
+#To create new branch.
+git checkout -b branchname		                                
+
+#To switch to different branch
+git checkout branchname		                                      
+
+#To delete branch	
+git branch -d new_branch		                                       
+
+#To delete branch
+git branch -a				                                               
+
+#Pull the changes on "/remotes/origin/master/" not on "master" directly, local code will not be impacted.
+git fetch			                        	 
+
+#Currently on master branch, will merge the change of feature to master branch.
+git merge feature_branch 		            
+
+#To see the tag
+git tag					                        
+
+#To see the tag
+git tag v.1.0.0				                   
+
+#To merge specific commit id, not entire.
+git cherry-pick commitid		             
+
+#To revert to last changes and create new commit id to maintain the history
+git revert commitid 			               
+
+#moves all code from the working/staging area to the stash area/mode(hidden)
+git stash				                         			
