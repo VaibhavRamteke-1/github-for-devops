@@ -1,0 +1,65 @@
+#Git Branch Strategy Guide :
+
+#Overview :
+This document explains the Git branching strategy used in this project.
+The goal is to maintain clean history, enable collaboration, and support smooth releases.
+
+#Branch Types :
+
+1. master.
+- Production-ready code
+- Always stable
+- Only merged via Pull Request (PR)
+
+2. develop.
+- Integration branch for features
+- Latest development code
+- Used for testing before release
+
+3. feature.
+- Used for new features
+- Created from develop
+Ex: git checkout -b feature/login-page
+
+4. hotfix.
+- Used for urgent production fixes
+- Created from main
+Ex: git checkout -b hotfix/payment-bug
+
+5.release.
+- Used for preparing production release
+- Created from develop
+
+#Workflow :
+Step 1: Create feature branch.
+git checkout develop 
+git pull origin develop 
+git checkout -b feature/feature-name
+
+Step 2: Work and commit
+git add .
+git commit -m "Add feature"
+
+Step 3: Keep branch updated
+git fetch origin
+git rebase origin/develop
+
+Step 4: Push branch
+git push origin feature/feature-name
+
+Step 5: Create Pull Request
+Open PR from feature/* → develop
+Request code review
+
+Step 6: Merge
+Use merge 
+Delete branch after merge
+
+#Best Practices:
+- Never commit directly to main
+- Always use Pull Requests
+- Keep commits small and meaningful
+- Use proper commit messages
+
+#Example Flow
+feature/login → develop → main
